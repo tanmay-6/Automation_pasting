@@ -3,8 +3,6 @@ import random
 import csv
 import os
 
-# Load the template image
-
 #loading csv file
 csv_file_path="file_names.csv"
 
@@ -16,16 +14,15 @@ with open(csv_file_path, newline='') as file:
     for row in csv_reader:
         logo_paths.append(row[0]) 
 
-#print (logo_paths)
-
 template_list=["Community Partners.png","Community Partners-1.png","Community Partners-2.png","Community Partners-3.png",]
 
 for logo_path in logo_paths:
-    # Load the logo image
+    # Load the template file
     template = Image.open(random.choice(template_list))
+    # Load the logo image
     logo = Image.open(logo_path)
 
-    # Calculate the position to place the logo in the center
+    # Calculate the position to place the logo (you have to play a little)
     size = 700,400
     logo.thumbnail(size)
     width, height = logo.size
@@ -34,7 +31,7 @@ for logo_path in logo_paths:
     y = 600 - (height//2)
 
     # Paste the logo onto the template
-    #template.paste(logo,[x,y],logo)
+    #template.paste(logo,[x,y],logo) would work if there is no transparency
     if logo.mode in ('RGBA', 'LA') or (logo.mode == 'P' and 'transparency' in logo.info):
         # If the logo has an alpha channel, paste it with a mask
         template.paste(logo, (x, y), logo)
@@ -43,7 +40,7 @@ for logo_path in logo_paths:
         template.paste(logo, (x, y))
 
     # Save the modified template with the logo
-    output_path = r"C:\Users\TAnny\Downloads\Communtiy\output" + "\\" + os.path.basename(logo_path)
+    output_path = r"path_to_save\output" + "\\" + os.path.basename(logo_path)
     template.save(output_path, "PNG")
 
 # Close the template image
