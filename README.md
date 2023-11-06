@@ -6,12 +6,12 @@ To install it simply run: pip install Pillow
 https://pypi.org/project/Pillow/ (documentation)
 
 TIP : Follow the main.py file to go through the code.
-Save all the logos in a directory (relative addresses in my case).
-Make the csv file for all the names. (see make_csv.py for code)
-After that read the csv in main file, and make a list of all the logo files (you can also iterate through csv I just felt secured to do so :P)
-Now take the template file and loop for all the logos/images.
-Inside the loop I have resized the logo/image using thumbnail function. (logos which were too large to handle you can also explore image.resize() funtion in documentation)
-Then you can go with pasting each logo on to template while saving all the files in the output directory.
+1. Save all the logos in a directory (relative addresses in my case).
+2. Make the csv file for all the names. (see make_csv.py for code)
+3. After that read the csv in main file, and make a list of all the logo files (you can also iterate through csv I just felt secured to do so :P)
+4. Now take the template file and loop for all the logos/images.
+5. Inside the loop I have resized the logo/image using thumbnail function. (logos which were too large to handle you can also explore image.resize() funtion in documentation)
+6. Then you can go with pasting each logo on to template while saving all the files in the output directory.
 
 NOTE: I had some logos with transparency so have to add a transparency mask and therefore have to use if/else.
 
