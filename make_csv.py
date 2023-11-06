@@ -2,7 +2,7 @@ import os
 import csv
 
 # Specify the directory path you want to list the files from
-directory_path = "C:/Users/TAnny/Downloads/Communtiy/logo"
+directory_path = "path_to_files/logo"
 
 # Create a list to store the file names
 file_names = []
