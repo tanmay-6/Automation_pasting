@@ -14,7 +14,7 @@ with open(csv_file_path, newline='') as file:
     for row in csv_reader:
         logo_paths.append(row[0]) 
 
-template_list=["Community Partners.png","Community Partners-1.png","Community Partners-2.png","Community Partners-3.png",]
+template_list=["template1.png","template2.png","template3.png","template4.png",]
 
 for logo_path in logo_paths:
     # Load the template file
