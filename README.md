@@ -16,3 +16,4 @@ TIP : Follow the main.py file to go through the code.
 NOTE: I had some logos with transparency so have to add a transparency mask and therefore have to use if/else.
 
 There you go 100 logos pasted in 2 seconds and one click. ( Cheers to chatgpt XD )
+TIP: you can also use a similar approach with cv library to write someting in the template; already used in generating certificates.
